@@ -1,0 +1,89 @@
+.popular{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    .popular-container {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 25px;
+        .popular-card{
+            position: relative;
+            overflow: hidden;
+            &:hover .popular-bottom{
+                opacity: 1;
+                bottom: 0;
+                visibility: visible;
+            }
+            &:hover .popular-center{
+                opacity: 1;
+                top: 50%;
+                visibility: visible;
+            }
+            .popular-img{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .popular-center{
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.5s ease;
+            }
+            .popular-bottom{
+                position: absolute;
+                bottom: -100px;
+                left: 0%;
+                height: 100px;
+                width: 100%;
+                background: rgba(29,37,71,0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.5s ease;
+                h3{
+                    text-align: center;
+                    color: #fff;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    font-family: $cinzel;
+                }
+            }
+        }
+    }
+}
+
+.feature{
+    width: 100%;
+    height: auto;
+    .feature-container{
+        background-color:#f7f7fd;
+        padding: 150px 30px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 25px;
+        justify-items: center;
+        .feature-card{
+            .feature-content{
+                padding-top: 10px;
+                h3{
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    padding-bottom: 5px;
+                    color: #2B2B2B;
+                }
+                p{
+                    font-size: 1.6rem;
+                    color: $text-bg;
+                }
+            }
+        }
+    }
+}
