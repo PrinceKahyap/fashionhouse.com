@@ -13,6 +13,12 @@ html {
 }
 
 /* ---------- Global-classes ---------- */
+
+$cinzel: 'Cinzel', serif;
+$blue-color: #9F78FF;
+$light-bg: #1D2547;
+$text-bg: #2B2B2B;
+
 a {
     text-decoration: none;
 }
@@ -24,22 +30,5 @@ li {
 main {
     position: relative;
 }
-.btn{
-    width: 180px;
-    height: 60px;
-    border: none;
-    color: #fff;
-    background-color: #9F78FF;
-    font-size: 1.8rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-.wrapper{
-    max-width: 90%;
-    margin: auto;
-}
-$cinzel: 'Cinzel', serif;
-$blue-color: #9F78FF;
-$light-bg: #1D2547;
-$text-bg: #2B2B2B;
+
 /* ---------- /Global-classes ---------- */
