@@ -5,3 +5,7 @@ hamburger.addEventListener("click",() => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 });
+
+// footer date 
+const year = document.querySelector(".current-year")
+year.innerHTML = new Date().getFullYear();
