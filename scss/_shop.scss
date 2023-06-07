@@ -198,9 +198,22 @@
                     cursor: pointer;
                     letter-spacing: 1px;
                     position: relative;
-
-                    &:hover {
-                        background: #8e6ce4;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    z-index: 1000;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: -100%;
+                        top: 0;
+                        background: #8c6ae4;
+                        transition: 0.5s ease;
+                        z-index: -1;
+                    }
+                    &:hover::before{
+                        left: 0;
                     }
                 }
             }
