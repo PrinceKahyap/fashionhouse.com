@@ -1,20 +1,22 @@
 @media (max-width: 1024px) {
-    .collection{
-        .collection-items{
-            h2{
+    .collection {
+        .collection-items {
+            h2 {
                 font-size: 5rem;
             }
         }
-    
-        .collection-container{
-            .collection-card{
+
+        .collection-container {
+            .collection-card {
                 position: relative;
-                .collection-img{
+
+                .collection-img {
                     position: relative;
-    
+
                 }
-                .coolection-content{
-                    h3{
+
+                .coolection-content {
+                    h3 {
                         font-size: 2.5rem;
                     }
                 }
@@ -30,25 +32,28 @@
         }
     }
 
-    .collection{
-        .collection-items{
-            h2{
+    .collection {
+        .collection-items {
+            h2 {
                 font-size: 5rem;
             }
         }
-    
-        .collection-container{
-            .collection-card{
+
+        .collection-container {
+            .collection-card {
                 position: relative;
-                .collection-img{
+
+                .collection-img {
                     position: relative;
-    
+
                 }
-                .coolection-content{
-                    h3{
+
+                .coolection-content {
+                    h3 {
                         font-size: 2.2rem;
                     }
-                    a{
+
+                    a {
                         font-size: 1.6rem;
                     }
                 }
@@ -92,26 +97,30 @@
 }
 
 @media (max-width: 768px) {
-    .collection{
-        .collection-items{
-            h2{
+    .collection {
+        .collection-items {
+            h2 {
                 font-size: 4rem;
             }
         }
-    
-        .collection-container{
+
+        .collection-container {
             grid-template-columns: 1fr;
-            .collection-card{
+
+            .collection-card {
                 position: relative;
-                .collection-img{
+
+                .collection-img {
                     position: relative;
-    
+
                 }
-                .coolection-content{
-                    h3{
+
+                .coolection-content {
+                    h3 {
                         font-size: 2.5rem;
                     }
-                    a{
+
+                    a {
                         font-size: 1.6rem;
                     }
                 }
@@ -143,6 +152,7 @@
                 font-size: 5rem;
             }
         }
+
         .arrival-container {
             grid-template-columns: repeat(1, 1fr);
             padding: 0 10px;
@@ -150,28 +160,34 @@
         }
     }
 
-    .collection{
-        .collection-items{
+    .collection {
+        .collection-items {
             padding: 150px 5px;
-            h2{
+
+            h2 {
                 font-size: 3.5rem;
             }
         }
-    
-        .collection-container{
+
+        .collection-container {
             grid-template-columns: 1fr;
-            .collection-card{
+
+            .collection-card {
                 position: relative;
-                .collection-img{
+
+                .collection-img {
                     position: relative;
-    
+
                 }
-                .coolection-content{
+
+                .coolection-content {
                     bottom: 25px;
-                    h3{
+
+                    h3 {
                         font-size: 2rem;
                     }
-                    a{
+
+                    a {
                         font-size: 1.4rem;
                     }
                 }
@@ -245,48 +261,107 @@
         }
     }
 
-
     footer {
         .footer-container {
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 50px;
             justify-items: start;
             padding: 0 10px;
+
+            .footer-items {
+                .footer-title {
+                    padding-bottom: 30px;
+
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .footer-content {
+                    p {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .footer-icons {
+                    padding-top: 30px;
+                    ul {
+                        display: flex;
+                        gap: 30px;
+
+                        li {
+                            width: 50px;
+                            height: 50px;
+                            border: 1px solid #C2C5DB;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            i {
+                                font-size: 1.6rem;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                .footer_Links {
+                    ul {
+                        display: flex;
+                        gap: 10px;
+                        flex-direction: column;
+
+                        a {
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
         }
 
         .footer-bottom {
-            padding: 0 10px;
-            padding-top: 50px;
+            p {
+                font-size: 1.4rem;
+                line-height: 1.6;
+            }
         }
     }
 }
 
-@media(max-width :380px){
-    .collection{
-        .collection-items{
+@media(max-width :380px) {
+    .collection {
+        .collection-items {
             padding: 150px 5px;
-            h2{
-                font-size: 2.2rem;
+
+            h2 {
+                font-size: 2rem;
             }
-            a{
+
+            a {
                 font-size: 1.4rem;
             }
         }
-    
-        .collection-container{
+
+        .collection-container {
             grid-template-columns: 1fr;
-            .collection-card{
+
+            .collection-card {
                 position: relative;
-                .collection-img{
+
+                .collection-img {
                     position: relative;
-    
+
                 }
-                .coolection-content{
+
+                .coolection-content {
                     bottom: 25px;
-                    h3{
+
+                    h3 {
                         font-size: 2rem;
                     }
-                    a{
+
+                    a {
                         font-size: 1.4rem;
                     }
                 }

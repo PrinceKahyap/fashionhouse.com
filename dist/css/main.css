@@ -927,9 +927,46 @@ footer .footer-bottom p .name {
     justify-items: start;
     padding: 0 10px;
   }
-  footer .footer-bottom {
-    padding: 0 10px;
-    padding-top: 50px;
+  footer .footer-container .footer-items .footer-title {
+    padding-bottom: 30px;
+  }
+  footer .footer-container .footer-items .footer-title h2 {
+    font-size: 1.8rem;
+  }
+  footer .footer-container .footer-items .footer-content p {
+    font-size: 1.4rem;
+  }
+  footer .footer-container .footer-items .footer-icons {
+    padding-top: 30px;
+  }
+  footer .footer-container .footer-items .footer-icons ul {
+    display: flex;
+    gap: 30px;
+  }
+  footer .footer-container .footer-items .footer-icons ul li {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #C2C5DB;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer-container .footer-items .footer-icons ul li i {
+    font-size: 1.6rem;
+    color: #fff;
+  }
+  footer .footer-container .footer-items .footer_Links ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  footer .footer-container .footer-items .footer_Links ul a {
+    font-size: 1.4em;
+  }
+  footer .footer-bottom p {
+    font-size: 1.4rem;
+    line-height: 1.6;
   }
 }
 @media (max-width: 380px) {
@@ -937,7 +974,7 @@ footer .footer-bottom p .name {
     padding: 150px 5px;
   }
   .collection .collection-items h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .collection .collection-items a {
     font-size: 1.4rem;
