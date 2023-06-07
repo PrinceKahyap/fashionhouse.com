@@ -61,6 +61,18 @@
         }
     }
 
+    .hero {
+        .hero-container {
+            h1 {
+                font-size: 8rem;
+            }
+
+            a {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
     footer {
         position: relative;
         bottom: 0;
@@ -97,6 +109,18 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        .hero-container {
+            h1 {
+                font-size: 6rem;
+            }
+
+            a {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
     .collection {
         .collection-items {
             h2 {
@@ -128,6 +152,13 @@
         }
     }
 
+    .blog {
+        .blog-container {
+            grid-template-columns: 1fr;
+            padding-bottom: 50px;
+        }
+    }
+
     .contact {
         position: relative;
         width: 100%;
@@ -146,6 +177,20 @@
 }
 
 @media (max-width:568px) {
+    .hero {
+        .hero-container {
+            padding: 200px 20px;
+
+            h1 {
+                font-size: 6rem;
+            }
+
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
     .arrival {
         .arrival-title {
             h2 {
@@ -285,6 +330,7 @@
 
                 .footer-icons {
                     padding-top: 30px;
+
                     ul {
                         display: flex;
                         gap: 30px;
@@ -330,6 +376,20 @@
 }
 
 @media(max-width :380px) {
+    .hero {
+        .hero-container {
+            padding: 200px 20px;
+
+            h1 {
+                font-size: 4.5rem;
+            }
+
+            a {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
     .collection {
         .collection-items {
             padding: 150px 5px;
