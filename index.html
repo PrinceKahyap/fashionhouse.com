@@ -13,7 +13,7 @@
 <body>
     <!--  @@@@@@@@@@ Header-section @@@@@@@@@@@@ -->
     <header class="header">
-        <!-- <nav class="navbar">
+        <nav class="navbar">
             <div class="navbarLeft">
                 <div class="logo">
                     <a href="#">Shion House</a>
@@ -22,7 +22,16 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html" class="desktop">Blog</a>
+                        <input type="checkbox" id="showMenu">
+                        <label for="showMenu" class="mobile">Blog +</label>
+                        <ul class="drop-menu">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Blog Details</a></li>
+                            <li><a href="#">Element</a></li>
+                            <li><a href="#">Product Details</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -35,19 +44,29 @@
                     </ul>
                 </div>
                 <div class="nav-search">
-                    <button><i class="fa fa-search"></i></button>
+                    <div class="navOverlay" id="myOverlay">
+                        <span class="closebtn" onclick="closeSearch()"><i class="fa fa-times"></i>
+                        </span>
+                        <div class="overlay-content">
+                            <form action="/">
+                                <input type="text" placeholder="Search....">
+                                <button class="overlay-btn"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <button class="search-btn" onclick="openSearch()"><i class="fa fa-search"></i></button>
                 </div>
-                 <div class="nav-cart">
+                <div class="nav-cart">
                     <img src="/dist/img/card.svg" alt="">
                     <span>0</span>
-                </div> -->
-        <!-- <div class="hamburger">
-                    <div class="span"></div>
-                    <div class="span"></div>
-                    <div class="span"></div>
                 </div>
-            </div> -->
-        <!-- </nav>  -->
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
     </header>
     <!--  @@@@@@@@@@ /Header-section @@@@@@@@@@@@ -->
 
@@ -269,7 +288,7 @@
                     <div class="coolection-content">
                         <h3>Established fact that by the <br>
                             readable content</h3>
-                            <a href="#">Read More</a>
+                        <a href="#">Read More</a>
                     </div>
                 </div>
                 <div class="collection-card">
@@ -279,7 +298,7 @@
                     <div class="coolection-content">
                         <h3>Established fact that by the <br>
                             readable content</h3>
-                            <a href="#">Read More</a>
+                        <a href="#">Read More</a>
                     </div>
                 </div>
             </div>
@@ -340,7 +359,8 @@
                     <h2 class="heading">SHION HOUSE</h2>
                 </div>
                 <div class="footer-content">
-                    <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros
+                    <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+                        ornare, eros
                         dolor interdum nulla.</p>
                 </div>
                 <div class="footer-icons">
@@ -401,8 +421,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Copyright ©<span class="current-year"></span> All rights reserved | This template is made with <i
-                    class="fa fa-heart"></i> by <span class="name">Prince kashyap</span></p>
+            <p>Copyright ©<span class="current-year"></span> All rights reserved | This template is made
+                with <i class="fa fa-heart"></i> by <span class="name">Prince kashyap</span></p>
         </div>
 
     </footer>

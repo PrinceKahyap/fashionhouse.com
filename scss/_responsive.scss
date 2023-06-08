@@ -1,4 +1,8 @@
 @media (max-width: 1024px) {
+    .header .navbar .navbarRight .nav-icons {
+        display: none;
+    }
+
     .collection {
         .collection-items {
             h2 {
@@ -26,6 +30,105 @@
 }
 
 @media (max-width:992px) {
+    .header {
+        .navbar {
+            .navbarLeft {
+                .nav-menu {
+                    position: absolute;
+                    top: 80px;
+                    left: -100%;
+                    width: 100%;
+                    height: auto;
+                    gap: 30px;
+                    flex-direction: column;
+                    background: #ffff;
+                    padding: 30px 10px;
+
+                    li {
+                        &:hover .drop-menu {
+                            opacity: 1;
+                            visibility: visible;
+                            top: 80px;
+                        }
+                    }
+
+                    a {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        color: #1D2547;
+                        transition: 0.5s ease;
+                        text-transform: uppercase;
+                        padding: 8px 20px;
+
+                        &:hover {
+                            color: #8c6ae4;
+                        }
+                    }
+
+                    .desktop {
+                        display: none;
+                    }
+
+                    .drop-menu {
+                        position: static;
+                        opacity: 1;
+                        visibility: visible;
+                        overflow: hidden;
+                        height: 0;
+                        border: none;
+                        padding: 0;
+                        transition: none;
+
+                        li {
+                            &:hover {
+                                transform: none;
+                            }
+                        }
+                    }
+
+                    .mobile {
+                        display: block;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        color: #1D2547;
+                        transition: 0.5s ease;
+                        text-transform: uppercase;
+                        padding: 8px 20px;
+                        cursor: pointer;
+                    }
+                }
+
+                .nav-menu.active {
+                    left: 0;
+                }
+
+                #showMenu:checked~.drop-menu {
+                    height: 100%;
+                    transition: none;
+                    padding: 20px;
+                    width: 95%;
+                    margin: auto;
+                    background: #F6F8FE;
+                }
+
+                #showMenu:checked~.drop-menu li {
+                    transition: none;
+                }
+
+            }
+            .navbarRight{
+                .nav-cart {
+                    display: none;
+                }
+    
+                .hamburger {
+                    display: block;
+                }
+            }
+
+        }
+    }
+
     .arrival {
         .arrival-container {
             grid-template-columns: repeat(2, 1fr);
@@ -87,7 +190,7 @@
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 50px;
             justify-items: start;
-            padding: 0 20px;
+            padding: 0 0px;
         }
     }
 
@@ -107,6 +210,7 @@
         }
     }
 }
+
 
 @media (max-width: 768px) {
     .hero {
@@ -177,6 +281,112 @@
 }
 
 @media (max-width:568px) {
+    .header {
+        .navbar {
+            .navbarLeft {
+                .logo a {
+                    font-size: 2.5rem;
+                }
+                .nav-menu {
+                    position: absolute;
+                    top: 80px;
+                    left: -100%;
+                    width: 100%;
+                    height: auto;
+                    gap: 30px;
+                    flex-direction: column;
+                    background: #ffff;
+                    padding: 30px 10px;
+
+                    li {
+                        &:hover .drop-menu {
+                            opacity: 1;
+                            visibility: visible;
+                            top: 80px;
+                        }
+                    }
+
+                    a {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #1D2547;
+                        transition: 0.5s ease;
+                        text-transform: uppercase;
+                        padding: 8px 10px;
+
+                        &:hover {
+                            color: #8c6ae4;
+                        }
+                    }
+
+                    .desktop {
+                        display: none;
+                    }
+
+                    .drop-menu {
+                        position: static;
+                        opacity: 1;
+                        visibility: visible;
+                        overflow: hidden;
+                        height: 0;
+                        border: none;
+                        padding: 0;
+                        transition: none;
+
+                        li {
+                            &:hover {
+                                transform: none;
+                            }
+                        }
+                    }
+
+                    .mobile {
+                        display: block;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #1D2547;
+                        transition: 0.5s ease;
+                        text-transform: uppercase;
+                        padding: 8px 10px;
+                        cursor: pointer;
+                    }
+                }
+
+                .nav-menu.active {
+                    left: 0;
+                }
+
+                #showMenu:checked~.drop-menu {
+                    height: 100%;
+                    transition: none;
+                    padding: 20px;
+                    width: 95%;
+                    margin: auto;
+                    background: #F6F8FE;
+                }
+
+                #showMenu:checked~.drop-menu li {
+                    transition: none;
+                }
+                #showMenu:checked~.drop-menu li a{
+                    font-size: 1.4rem;
+                }
+
+            }
+            .navbarRight{
+                gap: 5px;
+                .nav-cart {
+                    display: none;
+                }
+    
+                .hamburger {
+                    display: block;
+                }
+            }
+
+        }
+    }
+
     .hero {
         .hero-container {
             padding: 200px 20px;
@@ -311,7 +521,7 @@
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 50px;
             justify-items: start;
-            padding: 0 10px;
+            padding: 0 0px;
 
             .footer-items {
                 .footer-title {
@@ -376,6 +586,114 @@
 }
 
 @media(max-width :380px) {
+
+    .header {
+        .navbar {
+            .navbarLeft {
+                .logo a {
+                    font-size: 2.5rem;
+                }
+                .nav-menu {
+                    position: absolute;
+                    top: 80px;
+                    left: -100%;
+                    width: 100%;
+                    height: auto;
+                    gap: 30px;
+                    flex-direction: column;
+                    background: #ffff;
+                    padding: 30px 10px;
+
+                    li {
+                        &:hover .drop-menu {
+                            opacity: 1;
+                            visibility: visible;
+                            top: 80px;
+                        }
+                    }
+
+                    a {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #1D2547;
+                        transition: 0.5s ease;
+                        text-transform: uppercase;
+                        padding: 8px 0px;
+
+                        &:hover {
+                            color: #8c6ae4;
+                        }
+                    }
+
+                    .desktop {
+                        display: none;
+                    }
+
+                    .drop-menu {
+                        position: static;
+                        opacity: 1;
+                        visibility: visible;
+                        overflow: hidden;
+                        height: 0;
+                        border: none;
+                        padding: 0;
+                        transition: none;
+
+                        li {
+                            &:hover {
+                                transform: none;
+                            }
+                        }
+                    }
+
+                    .mobile {
+                        display: block;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        color: #1D2547;
+                        transition: 0.5s ease;
+                        text-transform: uppercase;
+                        padding: 8px 0px;
+                        cursor: pointer;
+                    }
+                }
+
+                .nav-menu.active {
+                    left: 0;
+                }
+
+                #showMenu:checked~.drop-menu {
+                    height: 100%;
+                    transition: none;
+                    padding: 20px;
+                    width: 95%;
+                    margin: auto;
+                    background: #F6F8FE;
+                }
+
+                #showMenu:checked~.drop-menu li {
+                    transition: none;
+                }
+                #showMenu:checked~.drop-menu li a {
+                    font-size: 1.4rem;
+                }
+
+
+            }
+            .navbarRight{
+                gap: 5px;
+                .nav-cart {
+                    display: none;
+                }
+    
+                .hamburger {
+                    display: block;
+                }
+            }
+
+        }
+    }
+
     .hero {
         .hero-container {
             padding: 200px 20px;
@@ -395,7 +713,7 @@
             padding: 150px 5px;
 
             h2 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             a {
