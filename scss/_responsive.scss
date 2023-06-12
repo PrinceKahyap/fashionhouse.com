@@ -374,7 +374,18 @@
 
             }
             .navbarRight{
-                gap: 5px;
+                .nav-search {
+                    .navOverlay{
+                        .overlay-content{
+                            form{
+                                max-width: 80%;
+    
+                            }
+                        }
+                    }
+                    .search-btn {
+                    }
+                }
                 .nav-cart {
                     display: none;
                 }

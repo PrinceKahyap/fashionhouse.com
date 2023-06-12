@@ -1514,8 +1514,8 @@ footer .footer-bottom p .name {
   .header .navbar .navbarLeft #showMenu:checked ~ .drop-menu li a {
     font-size: 1.4rem;
   }
-  .header .navbar .navbarRight {
-    gap: 5px;
+  .header .navbar .navbarRight .nav-search .navOverlay .overlay-content form {
+    max-width: 80%;
   }
   .header .navbar .navbarRight .nav-cart {
     display: none;
