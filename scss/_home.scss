@@ -1,4 +1,89 @@
 /* -------------- Shop-style ------------------ */
+.shop {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+
+    .shop-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        padding: 0 0;
+
+        .shop-items {
+            position: relative;
+            overflow: hidden;
+
+            &:hover .shop-top {
+                top: 40%;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &:hover .shop-content {
+                bottom: 0;
+            }
+
+            .shop-top {
+                position: absolute;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50%);
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s ease;
+
+                button {
+                    border: none;
+                    cursor: pointer;
+                    overflow: hidden;
+                    position: relative;
+                    width: 200px;
+                    height: 60px;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    background: #9F78FF;
+                    z-index: 1000;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: -100%;
+                        background-color: #8463d6;
+                        transition: 0.3s ease;
+                        z-index: -1;
+                    }
+
+                    &:hover::before {
+                        left: 0;
+                    }
+                }
+            }
+
+            .shop-content {
+                position: absolute;
+                bottom: -60px;
+                width: 100%;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(29, 37, 71, 0.5);
+                transition: 0.3s ease;
+
+                h3 {
+                    font-size: 2.2rem;
+                    color: #fff;
+                    font-weight: 500;
+                    font-family: $font-cinzel;
+                }
+            }
+        }
+    }
+}
 
 /* -------------- /Shop-style ------------------ */
 
@@ -87,10 +172,12 @@
             }
         }
     }
-    .arrival-button{
+
+    .arrival-button {
         display: flex;
         justify-content: center;
         align-items: center;
+
         .arrivalBtn{
             position: relative;
             border: 1px solid #9F78FF;
@@ -98,9 +185,10 @@
             font-size: 1.8rem;
             color: #9F78FF;
             overflow: hidden;
+            background: transparent;
             transition: 0.5s ease;
 
-            &::before{
+            &::before {
                 position: absolute;
                 content: '';
                 left: 0;
@@ -111,10 +199,12 @@
                 transition: 0.5s ease;
                 z-index: -1;
             }
-            &:hover::before{
+
+            &:hover::before {
                 top: 0;
             }
-            &:hover{
+
+            &:hover {
                 color: #fff;
             }
         }
@@ -176,6 +266,7 @@
                         font-size: 1.8rem;
                         background: #9F78FF;
                         z-index: 1000;
+                        border: none;
 
                         &::before {
                             position: absolute;
@@ -471,6 +562,19 @@ footer {
 }
 
 @media(max-width: 992px) {
+    .shop {
+        width: 100%;
+        height: auto;
+        padding: 50px 0;
+
+        .shop-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            padding: 0 0;
+        }
+    }
+
     .arrival {
         padding: 50px 0;
 
@@ -538,13 +642,34 @@ footer {
 }
 
 @media(max-width: 768px) {
-    .arrival{
-        .arrival-button{
-            .arrivalBtn{
+    .shop {
+        padding: 50px 0;
+
+        .shop-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            padding: 0 0;
+
+            .shop-items {
+                .shop-top {
+                    button {
+                        width: 180px;
+                        height: 50px;
+                        color: #fff;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    .arrival {
+        .arrival-button {
+            .arrivalBtn {
                 font-size: 1.6rem;
             }
         }
     }
+
     .popular {
         .popular-container {
             .popular-item {
@@ -618,12 +743,51 @@ footer {
 }
 
 @media(max-width: 568px) {
+    .shop {
+        padding: 50px 0;
+
+        .shop-container {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+            padding: 0 0;
+
+            .shop-items {
+                .shop-top {
+                    button {
+                        width: 150px;
+                        height: 50px;
+                        color: #fff;
+                        font-size: 1.4rem;
+                      
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: -100%;
+                            background-color: #8463d6;
+                            transition: 0.3s ease;
+                            z-index: -1;
+                        }
+
+                        &:hover::before {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .arrival {
         padding: 50px 0;
 
         .arrival-title {
             padding-bottom: 50px;
-            h2{
+
+            h2 {
                 font-size: 5rem;
             }
         }
@@ -633,9 +797,10 @@ footer {
             padding: 0 10px;
             padding-bottom: 50px;
         }
-        .arrival{
-            .arrival-button{
-                .arrivalBtn{
+
+        .arrival {
+            .arrival-button {
+                .arrivalBtn {
                     font-size: 1.4rem;
                 }
             }
@@ -650,7 +815,7 @@ footer {
                 .popular-img {
                     .popular-content {
                         position: relative;
-                        padding: 100px 0px;
+                        padding: 100px 10px;
 
                         h2 {
                             font-size: 3rem;
@@ -768,11 +933,13 @@ footer {
 
         .arrival-title {
             padding-bottom: 50px;
-            h2{
+
+            h2 {
                 font-size: 3.5rem;
             }
         }
     }
+
     .popular {
         .popular-container {
             .popular-item {
