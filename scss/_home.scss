@@ -29,6 +29,20 @@
 
             .nav-menu {
                 display: flex;
+                .mobile{
+                    display: none;
+
+                }
+                input{
+                    display: none;
+                }
+                li{
+                    &:hover .drop-menu{
+                        top: 98px;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
 
                 a {
                     padding: 8px 18px;
@@ -40,6 +54,20 @@
 
                     &:hover {
                         color: #9F78FF;
+                    }
+                }
+                .drop-menu{
+                    position: absolute;
+                    top: 80px;
+                    width: 180px;
+                    background: #ffffff;
+                    border-top: 4px solid #9F78FF;
+                    padding: 15px 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s ease;
+                    li{
+                        padding-bottom: 10px;
                     }
                 }
             }
@@ -763,6 +791,44 @@ footer {
                     flex-direction: column;
                     gap: 30px;
                     background: #ffffff;
+                    .desktop{
+                        display: none;
+                    }
+                    .mobile{
+                        display: block;
+                        padding-left: 20px;
+                        font-size: 1.6rem;
+                        cursor: pointer;
+                    }
+                    .drop-menu{
+                        position: static;
+                        top: 80px;
+                        width: 180px;
+                        background: #ffffff;
+                        border-top: none;
+                        padding: 15px 0;
+                        opacity: 1;
+                        visibility: visible;
+                        transition: 0.3s ease;
+                        height: 0;
+                        overflow: hidden;
+                        padding: 0;
+                        transition: none;
+                        li{
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+                #show-drop:checked ~ .drop-menu{
+                    height: 100%;
+                    width: 95%;
+                    margin: auto;
+                    margin-top: 20px;
+                    background: rgba(29, 37, 71, 0.05);
+                    padding: 15px 20px;
+                }
+                #show-drop:checked ~ .mobile{
+                    color: #9F78FF;
                 }
 
                 .nav-menu.active {
@@ -1025,6 +1091,14 @@ footer {
                     background: #ffffff;
                     a{
                         font-size: 1.4rem;
+                    }
+                    .mobile{
+                        font-size: 1.4rem;
+                    }
+                    .drop-menu{
+                        a{
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }
