@@ -1,5 +1,184 @@
+/* -------------- Header-style ------------------ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    z-index: 1000000;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 20px;
+
+        .navLeft {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            .logo a {
+                font-size: 2.5rem;
+                font-weight: 700;
+                font-family: $font-cinzel;
+                color: #1D2547;
+            }
+
+            .nav-menu {
+                display: flex;
+
+                a {
+                    padding: 8px 18px;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: #2B2B2B;
+                    text-transform: uppercase;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        color: #9F78FF;
+                    }
+                }
+            }
+        }
+
+        .navRight {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .navIcon {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    li {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid rgba(29, 37, 71, 0.12);
+                        border-radius: 50%;
+                        font-size: 1.6rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .navSearch {
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border: none;
+                    font-size: 1.6rem;
+                    border-radius: 50%;
+                    color: #1D2547;
+                    background: #F6F8FE;
+                    cursor: pointer;
+                }
+            }
+
+            .navCart {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                background: #9F78FF;
+                padding: 6px 20px;
+                border-radius: 20px;
+                cursor: pointer;
+
+                img {
+                    width: 15px;
+                }
+
+                span {
+                    color: #ffffff;
+                    font-size: 1.6rem;
+                }
+            }
+
+            .hamburger {
+                display: none;
+                cursor: pointer;
+
+                .line {
+                    width: 30px;
+                    height: 3px;
+                    margin: 6px;
+                    background: #1D2547;
+                }
+            }
+        }
+    }
+}
+
+/* -------------- /Header-style ------------------ */
+
+/* -------------- Hero-style ------------------ */
+.hero {
+    position: relative;
+    top: 80px;
+    padding-bottom: 100px;
+
+    .hero-container {
+        background: url(/dist/image/popular-imtes2.png);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+
+        h1 {
+            font-size: 10rem;
+            font-family: $font-cinzel;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            width: 200px;
+            height: 50px;
+            color: #fff;
+            font-size: 1.8rem;
+            background: #9F78FF;
+            z-index: 1000;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: -100%;
+                background-color: #8463d6;
+                transition: 0.3s ease;
+                z-index: -1;
+            }
+
+            &:hover::before {
+                left: 0;
+            }
+        }
+    }
+}
+
+/* -------------- /Hero-style ------------------ */
+
 /* -------------- Shop-style ------------------ */
 .shop {
+    position: relative;
     width: 100%;
     height: auto;
     padding: 50px 0;
@@ -39,7 +218,7 @@
                     overflow: hidden;
                     position: relative;
                     width: 200px;
-                    height: 60px;
+                    height: 50px;
                     color: #fff;
                     font-size: 1.8rem;
                     background: #9F78FF;
@@ -178,7 +357,7 @@
         justify-content: center;
         align-items: center;
 
-        .arrivalBtn{
+        .arrivalBtn {
             position: relative;
             border: 1px solid #9F78FF;
             padding: 12px 50px;
@@ -562,6 +741,68 @@ footer {
 }
 
 @media(max-width: 992px) {
+    .header {
+        .navbar {
+            padding: 0 0px;
+
+            .navLeft {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+
+                .logo a {
+                    font-size: 2.5rem;
+                }
+
+                .nav-menu {
+                    position: absolute;
+                    top: 100px;
+                    left: -100%;
+                    width: 100%;
+                    padding: 20px 10px;
+                    flex-direction: column;
+                    gap: 30px;
+                    background: #ffffff;
+                }
+
+                .nav-menu.active {
+                    left: 0;
+                }
+            }
+
+            .hamburger.active .line:nth-child(1) {
+                transform: translateY(9px)rotate(225deg);
+            }
+
+            .hamburger.active .line:nth-child(2) {
+                background: transparent;
+            }
+
+            .hamburger.active .line:nth-child(3) {
+                transform: translateY(-9px)rotate(-225deg);
+            }
+
+            .navRight {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .navIcon {
+                    display: none;
+                }
+
+                .navCart {
+                    display: none;
+                }
+
+                .hamburger {
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
     .shop {
         width: 100%;
         height: auto;
@@ -642,6 +883,21 @@ footer {
 }
 
 @media(max-width: 768px) {
+    .hero {
+        .hero-container {
+            h1 {
+                font-size: 8rem;
+                font-family: $font-cinzel;
+                text-align: center;
+                color: #ffffff;
+            }
+    
+            button {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
     .shop {
         padding: 50px 0;
 
@@ -662,6 +918,7 @@ footer {
             }
         }
     }
+
     .arrival {
         .arrival-button {
             .arrivalBtn {
@@ -743,6 +1000,48 @@ footer {
 }
 
 @media(max-width: 568px) {
+    .header {
+        .navbar {
+            padding: 0 0px;
+
+            .navLeft {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+
+                .logo a {
+                    font-size: 2.5rem;
+                }
+
+                .nav-menu {
+                    position: absolute;
+                    top: 100px;
+                    left: -100%;
+                    width: 100%;
+                    padding: 20px 0px;
+                    flex-direction: column;
+                    gap: 30px;
+                    background: #ffffff;
+                    a{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        .hero-container {
+            h1 {
+                font-size: 6rem;
+            }
+    
+            button {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
     .shop {
         padding: 50px 0;
 
@@ -754,11 +1053,11 @@ footer {
             .shop-items {
                 .shop-top {
                     button {
-                        width: 150px;
+                        width: 170px;
                         height: 50px;
                         color: #fff;
                         font-size: 1.4rem;
-                      
+
 
                         &::before {
                             position: absolute;
@@ -928,6 +1227,18 @@ footer {
 }
 
 @media(max-width: 390px) {
+    .hero {
+        .hero-container {
+            h1 {
+                font-size: 5rem;
+            }
+    
+            button {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
     .arrival {
         padding: 50px 0;
 
