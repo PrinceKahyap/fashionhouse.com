@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="shortcut icon" href="/dist/image/icons8-home-48.png" type="image/x-icon">
     <title>Shionhouse.com</title>
 </head>
 
-<body>
+<body onload="myfunction()">
+    <div id="loader">
+        <img src="/dist/image/Spinner-2.gif" alt="spinner">
+    </div>
     <!-- ----------------Header-section ---------------- -->
     <header class="header">
         <nav class="navbar wrapper">
@@ -42,7 +46,18 @@
                     </ul>
                 </div>
                 <div class="navSearch">
-                    <button><i class="fa fa-search"></i></button>
+                    <div class="navOverlay" id="navOverlay">
+                        <span class="closeBtn" onclick="closeSearch()"><i class="fa fa-times"></i></span>
+                        <div class="overlay-input">
+                            <form action="#">
+                                <div class="input-box">
+                                    <input type="text" placeholder="search">
+                                    <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button type="submit" onclick="openSearch()" class="btn-search"><i class="fa fa-search"></i></button>
                 </div>
                 <div class="navCart">
                     <img src="/dist/image/card.svg" alt="card">
