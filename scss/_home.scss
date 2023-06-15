@@ -1,3 +1,50 @@
+/* -------------- Feature-style ------------------ */
+.feature {
+    width: 100%;
+    height: auto;
+
+    .feature-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 25px;
+        background: #f7f7fd;
+        padding: 120px 30px;
+
+        .feature-items {
+            justify-self: center;
+
+            .feature-img {
+                height: 80px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: auto;
+                    height: 50px;
+                }
+            }
+
+            .feature-content {
+                padding-top: 25px;
+
+                h3 {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    color: #2B2B2B;
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                    color: #57667e;
+                }
+            }
+        }
+    }
+}
+
+/* -------------- /Feature-style ------------------ */
+
 /* -------------- Footer-style ------------------ */
 footer {
     width: 100%;
@@ -17,13 +64,14 @@ footer {
 
             .footer-title {
                 padding-bottom: 50px;
-                
+
                 h3 {
                     color: #fff;
                     font-size: 1.8rem;
                     font-weight: 500;
                 }
-                .foot-heading{
+
+                .foot-heading {
                     font-family: $font-cinzel;
                     font-size: 2.8rem;
                     font-weight: 700;
@@ -118,10 +166,19 @@ footer {
 
 /* -------------- /Footer-style ------------------ */
 
+
+
 /* -------------- Responsive-style ------------------ */
 @media(max-width: 1024px) {}
 
 @media(max-width: 992px) {
+    .feature {
+        .feature-container {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 120px 30px;
+        }
+    }
+
     footer {
         .footer-container {
             grid-template-columns: repeat(2, 1fr);
@@ -136,8 +193,17 @@ footer {
 }
 
 @media(max-width: 768px) {
+    .feature {
+        .feature-container {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 120px 20px;
+            max-width: 100%;
+        }
+    }
+
     footer {
         background: #1D2547;
+
         .footer-container {
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 50px;
@@ -160,6 +226,29 @@ footer {
 }
 
 @media(max-width: 568px) {
+    .feature {
+        .feature-container {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 80px 10px;
+
+            .feature-items {
+                justify-self: start;
+                .feature-content {
+                    padding-top: 15px;
+
+                    h3 {
+                        font-size: 1.6rem;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                        color: #57667e;
+                    }
+                }
+            }
+        }
+    }
+
     footer {
         .footer-container {
             grid-template-columns: repeat(1, 1fr);
@@ -175,7 +264,8 @@ footer {
                     h3 {
                         font-size: 1.6rem;
                     }
-                    .foot-heading{
+
+                    .foot-heading {
                         font-size: 2.5rem;
                         font-weight: 600;
                     }
@@ -195,6 +285,17 @@ footer {
 }
 
 @media(max-width: 390px) {
+    .feature {
+        .feature-container {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 80px 10px;
+
+            .feature-items {
+                justify-self: start;
+            }
+        }
+    }
+
     footer {
         .footer-container {
             .footer-items {
@@ -202,16 +303,19 @@ footer {
                     h3 {
                         font-size: 1.6rem;
                     }
-                    .foot-heading{
+
+                    .foot-heading {
                         font-size: 2.2rem;
                         font-weight: 600;
                     }
                 }
-                .footer-content{
-                    p{
+
+                .footer-content {
+                    p {
                         font-size: 1.2rem;
                     }
                 }
+
                 .footer-links {
                     ul {
                         li {
