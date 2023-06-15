@@ -166,7 +166,7 @@ footer {
             grid-gap: 50px;
             max-width: 100%;
             padding: 0 10px;
-            padding-top: 100px;
+            padding-top: 80px;
 
             .footer-items {
                 .footer-title {
@@ -197,12 +197,8 @@ footer {
 @media(max-width: 390px) {
     footer {
         .footer-container {
-            padding-top: 80px;
-
             .footer-items {
                 .footer-title {
-                    padding-bottom: 30px;
-
                     h3 {
                         font-size: 1.6rem;
                     }

@@ -165,7 +165,7 @@ footer .bottom-footer p i {
     grid-gap: 50px;
     max-width: 100%;
     padding: 0 10px;
-    padding-top: 100px;
+    padding-top: 80px;
   }
   footer .footer-container .footer-items .footer-title {
     padding-bottom: 25px;
@@ -186,12 +186,6 @@ footer .bottom-footer p i {
   }
 }
 @media (max-width: 390px) {
-  footer .footer-container {
-    padding-top: 80px;
-  }
-  footer .footer-container .footer-items .footer-title {
-    padding-bottom: 30px;
-  }
   footer .footer-container .footer-items .footer-title h3 {
     font-size: 1.6rem;
   }
