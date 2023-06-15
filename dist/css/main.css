@@ -33,6 +33,94 @@ img {
 }
 
 /* ------------ /Global-classes ------------ */
+/* -------------- Popular-style ------------------ */
+.popular {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+}
+.popular .popular-container {
+  padding: 0 0;
+  padding-bottom: 30px;
+}
+.popular .popular-container .popular-item {
+  position: relative;
+}
+.popular .popular-container .popular-item .popular-img {
+  position: relative;
+}
+.popular .popular-container .popular-item .popular-img .popular-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popular .popular-container .popular-item .popular-img .popular-content h2 {
+  color: #fff;
+  font-size: 7rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Cinzel", serif;
+}
+.popular .popular-container .popular-item .popular-img .popular-content .popularBtn {
+  text-align: center;
+}
+.popular .read-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  padding: 0 0;
+}
+.popular .read-container .read-items {
+  position: relative;
+  overflow: hidden;
+}
+.popular .read-container .read-items:hover img {
+  transform: scale(1.2);
+}
+.popular .read-container .read-items .read-img {
+  height: 100%;
+}
+.popular .read-container .read-items .read-img img {
+  transition: 0.5s ease;
+}
+.popular .read-container .read-items .read-content {
+  position: absolute;
+  bottom: 0px;
+  overflow: hidden;
+  left: 30px;
+  padding-bottom: 50px;
+}
+.popular .read-container .read-items .read-content h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #f7f7fd;
+  padding-bottom: 30px;
+}
+.popular .read-container .read-items .read-content .readBtn {
+  position: relative;
+  padding: 12px 50px;
+  color: #fff;
+  font-size: 1.8rem;
+  background: #9F78FF;
+  z-index: 1000;
+}
+.popular .read-container .read-items .read-content .readBtn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: #8463d6;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+.popular .read-container .read-items .read-content .readBtn:hover::before {
+  left: 0;
+}
+
+/* -------------- /Popular-style ------------------ */
 /* -------------- Feature-style ------------------ */
 .feature {
   width: 100%;
@@ -170,6 +258,28 @@ footer .bottom-footer p i {
 /* -------------- /Footer-style ------------------ */
 /* -------------- Responsive-style ------------------ */
 @media (max-width: 992px) {
+  .popular {
+    padding: 50px 0;
+  }
+  .popular .read-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 0 0;
+  }
+  .popular .read-container .read-items .read-content {
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+    left: 30px;
+    padding-bottom: 50px;
+  }
+  .popular .read-container .read-items .read-content h3 {
+    font-size: 2.3rem;
+  }
+  .popular .read-container .read-items .read-content .readBtn {
+    font-size: 1.6rem;
+  }
   .feature .feature-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 120px 30px;
@@ -183,6 +293,15 @@ footer .bottom-footer p i {
   }
 }
 @media (max-width: 768px) {
+  .popular {
+    padding: 50px 0;
+  }
+  .popular .read-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 0 0;
+  }
   .feature .feature-container {
     grid-template-columns: repeat(2, 1fr);
     padding: 120px 20px;
@@ -208,6 +327,28 @@ footer .bottom-footer p i {
   }
 }
 @media (max-width: 568px) {
+  .popular {
+    padding: 50px 0;
+  }
+  .popular .read-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 0 0;
+  }
+  .popular .read-container .read-items .read-content {
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+    left: 20px;
+    padding-bottom: 40px;
+  }
+  .popular .read-container .read-items .read-content h3 {
+    font-size: 2rem;
+  }
+  .popular .read-container .read-items .read-content .readBtn {
+    font-size: 1.4rem;
+  }
   .feature .feature-container {
     grid-template-columns: repeat(1, 1fr);
     padding: 80px 10px;

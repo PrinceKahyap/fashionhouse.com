@@ -1,3 +1,105 @@
+/* -------------- Popular-style ------------------ */
+.popular {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+
+    .popular-container{
+        padding: 0 0;
+        padding-bottom: 30px;
+        .popular-item{
+            position: relative;
+            .popular-img{
+                position: relative;
+                .popular-content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    h2{
+                        color: #fff;
+                        font-size: 7rem;
+                        font-weight: 500;
+                        text-align: center;
+                        font-family: $font-cinzel;
+                    }
+                    .popularBtn{
+                        text-align: center;
+                    }
+                }
+            }
+           
+        }
+
+    }
+
+    .read-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 0 0;
+
+        .read-items {
+            position: relative;
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(1.2);
+            }
+
+            .read-img {
+                height: 100%;
+
+                img {
+                    transition: 0.5s ease;
+                }
+            }
+
+            .read-content {
+                position: absolute;
+                bottom: 0px;
+                overflow: hidden;
+                left: 30px;
+                padding-bottom: 50px;
+
+                h3 {
+                    font-size: 3rem;
+                    font-weight: 500;
+                    color: #f7f7fd;
+                    padding-bottom: 30px;
+                }
+
+                .readBtn {
+                    position: relative;
+                    padding: 12px 50px;
+                    color: #fff;
+                    font-size: 1.8rem;
+                    background: #9F78FF;
+                    z-index: 1000;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: -100%;
+                        background-color: #8463d6;
+                        transition: 0.3s ease;
+                        z-index: -1;
+                    }
+
+                    &:hover::before {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}
+/* -------------- /Popular-style ------------------ */
+
 /* -------------- Feature-style ------------------ */
 .feature {
     width: 100%;
@@ -172,6 +274,38 @@ footer {
 @media(max-width: 1024px) {}
 
 @media(max-width: 992px) {
+    .popular {
+        padding: 50px 0;
+    
+        .read-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            padding: 0 0;
+    
+            .read-items {
+    
+                .read-content {
+                    position: absolute;
+                    bottom: 0px;
+                    overflow: hidden;
+                    left: 30px;
+                    padding-bottom: 50px;
+    
+                    h3 {
+                        font-size: 2.3rem;
+                    }
+    
+                    .readBtn {
+                        font-size: 1.6rem;
+                      
+                    }
+                }
+            }
+    
+        }
+    }
+
     .feature {
         .feature-container {
             grid-template-columns: repeat(2, 1fr);
@@ -193,6 +327,17 @@ footer {
 }
 
 @media(max-width: 768px) {
+    .popular {
+        padding: 50px 0;
+    
+        .read-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+            padding: 0 0;
+        }
+    }
+
     .feature {
         .feature-container {
             grid-template-columns: repeat(2, 1fr);
@@ -226,6 +371,38 @@ footer {
 }
 
 @media(max-width: 568px) {
+    .popular {
+        padding: 50px 0;
+    
+        .read-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 30px;
+            padding: 0 0;
+    
+            .read-items {
+    
+                .read-content {
+                    position: absolute;
+                    bottom: 0px;
+                    overflow: hidden;
+                    left: 20px;
+                    padding-bottom: 40px;
+    
+                    h3 {
+                        font-size: 2rem;
+                    }
+    
+                    .readBtn {
+                        font-size: 1.4rem;
+                      
+                    }
+                }
+            }
+    
+        }
+    }
+
     .feature {
         .feature-container {
             grid-template-columns: repeat(1, 1fr);
@@ -233,6 +410,7 @@ footer {
 
             .feature-items {
                 justify-self: start;
+
                 .feature-content {
                     padding-top: 15px;
 
