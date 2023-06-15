@@ -1001,6 +1001,7 @@ footer {
 
 @media(max-width: 568px) {
     .header {
+        height: 80px;
         .navbar {
             padding: 0 0px;
 
@@ -1015,7 +1016,7 @@ footer {
 
                 .nav-menu {
                     position: absolute;
-                    top: 100px;
+                    top: 80px;
                     left: -100%;
                     width: 100%;
                     padding: 20px 0px;
