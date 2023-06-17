@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="shortcut icon" href="/dist/image/icons8-home-48.png" type="image/x-icon">
+    <title>Shionhouse.com</title>
+</head>
+<body>
+    <!-- ----------------Header-section ---------------- -->
+    <header class="header">
+        <nav class="navbar wrapper">
+            <div class="navLeft">
+                <div class="logo">
+                    <a href="index.html">Shion House</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html" class="desktop">Blog</a>
+                        <input type="checkbox" name="" id="show-drop">
+                        <label for="show-drop" class="mobile">Blog +</label>
+                        <ul class="drop-menu">
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Blog Details</a></li>
+                            <li><a href="#">Elements</a></li>
+                            <li><a href="#">Product Details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navRight">
+                <div class="navIcon">
+                    <ul>
+                        <li><i class="fa fa-twitter"></i></li>
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-pinterest"></i></li>
+                    </ul>
+                </div>
+                <div class="navSearch">
+                    <div class="navOverlay" id="navOverlay">
+                        <span class="closeBtn" onclick="closeSearch()"><i class="fa fa-times"></i></span>
+                        <div class="overlay-input">
+                            <form action="#">
+                                <div class="input-box">
+                                    <input type="text" placeholder="search">
+                                    <button type="submit" class="searchBtn"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button type="submit" onclick="openSearch()" class="btn-search"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="navCart">
+                    <img src="/dist/image/card.svg" alt="card">
+                    <span>0</span>
+                </div>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ----------------/Header-section ---------------- -->
+
+    <script src="https://kit.fontawesome.com/edcd5c8c16.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    
+</body>
+</html>
