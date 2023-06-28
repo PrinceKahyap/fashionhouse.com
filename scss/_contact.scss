@@ -158,13 +158,16 @@
 
 @media(max-width: 568px){
     .map{
+        padding-top: 50px;
         .map-container{
             padding: 0 10px;
         }
     }
     .contact{
+        padding-top: 50px;
         .contact-container{
             grid-template-columns: repeat(1,1fr);
+            grid-gap: 25px;
             padding: 0 10px;
             .contactLeft{
                 .contact-title{

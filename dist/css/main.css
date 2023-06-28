@@ -1335,11 +1335,18 @@ footer .bottom-footer p i {
   }
 }
 @media (max-width: 568px) {
+  .map {
+    padding-top: 50px;
+  }
   .map .map-container {
     padding: 0 10px;
   }
+  .contact {
+    padding-top: 50px;
+  }
   .contact .contact-container {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
     padding: 0 10px;
   }
   .contact .contact-container .contactLeft .contact-title h2 {
