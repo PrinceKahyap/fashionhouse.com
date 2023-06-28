@@ -1,0 +1,182 @@
+/* --------------heroLink-style ------------------ */
+.heroLink{
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    ul{
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        background: #EFF5F8;
+        li{
+            font-size: 1.6rem;
+            color: #949EA5;
+            a{
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: #949EA5;
+                transition: 0.3s ease;
+                &:hover{
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+/* --------------/heroLink-style ------------------ */
+
+/* --------------Map-style ------------------ */
+.map {
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+
+    .map-container {
+        max-width: 1200px;
+        padding: 0 30px;
+    }
+}
+
+/* --------------/Map-style ------------------ */
+
+/* --------------contact-style ------------------ */
+.contact {
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    .contact-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 30px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 50px;
+
+        .contactLeft {
+            .contact-title {
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 600;
+                    font-family: $font-cinzel;
+                }
+            }
+
+            .contactForm {
+                padding-top: 0px;
+
+                form {
+                    .FormInput-100 {
+                        margin-top: 30px;
+                        margin-bottom: 30px;
+
+                        input {
+                            width: 100%;
+                            padding: 15px;
+                            outline: none;
+                            font-size: 1.4rem;
+                            border: 1px solid #e5e6e9;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            resize: none;
+                            padding: 15px;
+                            outline: none;
+                            font-size: 1.4rem;
+                            border: 1px solid #e5e6e9;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .FormInput-50 {
+                        display: flex;
+                        gap: 30px;
+
+                        input {
+                            width: 100%;
+                            font-size: 1.4rem;
+                            padding: 15px;
+                            border: 1px solid #e5e6e9;
+                            outline: none;
+                        }
+                    }
+                    .contactBtn{
+                        width: 120px;
+                        height: 50px;
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        font-family: $font-cinzel;
+                        background: transparent;
+                        color:#9F78FF;
+                        border: 1px solid #9F78FF;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .contactRight{
+            justify-self: end;
+            padding-top: 60px;
+            .contact-items{
+                display: grid;
+                grid-template-columns: 30px 1fr;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 40px;
+                i{
+                    font-size: 2.5rem;
+                    color: #8f9195;
+                }
+                p{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    font-family: $font-cinzel;
+                    color: #8f9195;
+                }
+            }
+        }
+    }
+}
+
+/* --------------/contact-style ------------------ */
+
+/* --------------Responsive-style ------------------ */
+@media(max-width: 992px){
+    .contact{
+        .contact-container{
+            grid-template-columns: repeat(1,1fr);
+            .contactRight{
+                justify-self: start;
+            }
+        }
+    }
+}
+
+@media(max-width: 568px){
+    .map{
+        .map-container{
+            padding: 0 10px;
+        }
+    }
+    .contact{
+        .contact-container{
+            grid-template-columns: repeat(1,1fr);
+            padding: 0 10px;
+            .contactLeft{
+                .contact-title{
+                    h2{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+            .contactRight{
+                justify-self: start;
+            }
+        }
+    }
+}
+/* --------------/Responsive-style ------------------ */
