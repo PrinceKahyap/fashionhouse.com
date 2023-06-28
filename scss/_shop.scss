@@ -2,7 +2,7 @@
 .browse {
     width: 100%;
     height: auto;
-    padding: 50px 0;
+    padding: 100px 0;
 
     .browse-title {
         max-width: 1200px;
@@ -198,6 +198,7 @@
 }
 @media(max-width: 568px){
     .browse{
+        padding: 50px 0;
         .browse-title{
             padding: 0 15px;
             h2{
