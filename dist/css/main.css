@@ -1196,6 +1196,64 @@ footer .bottom-footer p i {
   }
 }
 /* -------------- /Responsive-style ------------------ */
+/* --------------OurStory-style ------------------ */
+.OurStory {
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+}
+.OurStory .OurStory-title {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+.OurStory .OurStory-title h2 {
+  font-size: 5rem;
+  font-family: "Cinzel", serif;
+}
+.OurStory .OurStory-title p {
+  font-size: 2rem;
+  max-width: 80%;
+  margin: auto;
+  line-height: 2;
+  color: #646D77;
+}
+.OurStory .heading-1 {
+  margin-top: 50px;
+}
+
+/* --------------/OurStory-style ------------------ */
+/* --------------Responsive-style ------------------ */
+@media (max-width: 768px) {
+  .OurStory .OurStory-title h2 {
+    font-size: 3.5rem;
+  }
+  .OurStory .OurStory-title p {
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 568px) {
+  .OurStory {
+    padding: 50px 0;
+  }
+  .OurStory .OurStory-title {
+    padding: 0 10px;
+  }
+  .OurStory .OurStory-title h2 {
+    font-size: 3rem;
+  }
+  .OurStory .OurStory-title p {
+    font-size: 1.6rem;
+  }
+}
+/* --------------/Responsive-style ------------------ */
 /* --------------heroLink-style ------------------ */
 .heroLink {
   width: 100%;
@@ -1335,6 +1393,9 @@ footer .bottom-footer p i {
   }
 }
 @media (max-width: 568px) {
+  .heroLink {
+    padding-top: 80px;
+  }
   .map {
     padding-top: 50px;
   }
@@ -1351,6 +1412,9 @@ footer .bottom-footer p i {
   }
   .contact .contact-container .contactLeft .contact-title h2 {
     font-size: 2.5rem;
+  }
+  .contact .contact-container .contactLeft .contactForm form .FormInput-50 {
+    flex-direction: column;
   }
   .contact .contact-container .contactRight {
     justify-self: start;

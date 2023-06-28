@@ -157,6 +157,9 @@
 }
 
 @media(max-width: 568px){
+    .heroLink{
+        padding-top: 80px;
+    }
     .map{
         padding-top: 50px;
         .map-container{
@@ -173,6 +176,13 @@
                 .contact-title{
                     h2{
                         font-size: 2.5rem;
+                    }
+                }
+                .contactForm{
+                    form{
+                        .FormInput-50{
+                            flex-direction: column;
+                        }
                     }
                 }
             }
