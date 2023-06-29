@@ -257,17 +257,18 @@
                         border: 1px solid rgba(221, 221, 221, 0.5);
                         color: #000;
                         transition: 0.3s ease;
-
+                        
                         &:hover {
                             background: #9F78FF;
                             color: #fff;
                         }
-
+                        
                         &:hover a {
                             color: #fff;
                         }
-
+                        
                         a {
+                            color: #000;
                             font-size: 1.2rem;
                         }
 
@@ -351,8 +352,8 @@
 }
 @media(max-width: 568px){
     .blog {
+        padding: 50px 0;
         .blog-container {
-            padding: 50px 0;
             padding: 0 10px;
             .blogLeft{
                 .blogItems{
