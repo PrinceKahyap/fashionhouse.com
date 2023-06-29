@@ -1660,6 +1660,7 @@ footer .bottom-footer p i {
   color: #fff;
 }
 .blog .blog-container .blogRight .blog-clouds ul li a {
+  color: #000;
   font-size: 1.2rem;
 }
 .blog .blog-container .blogRight .blog-feeds {
@@ -1723,8 +1724,10 @@ footer .bottom-footer p i {
   }
 }
 @media (max-width: 568px) {
-  .blog .blog-container {
+  .blog {
     padding: 50px 0;
+  }
+  .blog .blog-container {
     padding: 0 10px;
   }
   .blog .blog-container .blogLeft .blogItems .blog-img .blogOverlay {
