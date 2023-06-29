@@ -1438,8 +1438,9 @@ footer .bottom-footer p i {
 /* --------------/Responsive-style ------------------ */
 /* -----------------blog-style------------------ */
 .blog {
+  position: relative;
   width: 100%;
-  height: 500px;
+  height: auto;
   padding: 100px 0;
 }
 .blog .blog-container {
@@ -1605,6 +1606,26 @@ footer .bottom-footer p i {
   padding-bottom: 20px;
   border-bottom: 1px solid #f0e9ff;
 }
+.blog .blog-container .blogRight .blog-post .blogPost-item {
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  padding-top: 20px;
+  align-items: center;
+}
+.blog .blog-container .blogRight .blog-post .blogPost-item .blogPostRight h4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-bottom: 0;
+  font-family: "Cinzel", serif;
+  color: #2d2d2d;
+}
+.blog .blog-container .blogRight .blog-post .blogPost-item .blogPostRight p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #2d2d2d;
+}
 .blog .blog-container .blogRight .blog-clouds {
   margin-top: 30px;
   padding: 30px;
@@ -1694,6 +1715,40 @@ footer .bottom-footer p i {
 }
 
 /* -----------------/blog-style------------------ */
+/* -----------------Responsive-style------------------ */
+@media (max-width: 992px) {
+  .blog .blog-container {
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+  }
+}
+@media (max-width: 568px) {
+  .blog .blog-container {
+    padding: 50px 0;
+    padding: 0 10px;
+  }
+  .blog .blog-container .blogLeft .blogItems .blog-img .blogOverlay {
+    width: 80px;
+    height: 80px;
+  }
+  .blog .blog-container .blogLeft .blogItems .blog-img .blogOverlay span {
+    font-size: 2.5rem;
+  }
+  .blog .blog-container .blogLeft .blogItems .blog-img .blogOverlay p {
+    font-size: 1.5rem;
+  }
+  .blog .blog-container .blogLeft .blogItems .blog-content {
+    padding: 10px;
+    padding-top: 40px;
+  }
+  .blog .blog-container .blogLeft .blogItems .blog-content h3 {
+    font-size: 2.2rem;
+  }
+  .blog .blog-container .blogLeft .blogItems .blog-content p {
+    font-size: 1.4rem;
+  }
+}
+/* -----------------/Responsive-style------------------ */
 /* --------------heroLink-style ------------------ */
 .heroLink {
   width: 100%;

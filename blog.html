@@ -7,7 +7,10 @@
     <link rel="shortcut icon" href="/dist/image/icons8-home-48.png" type="image/x-icon">
     <title>Shionhouse.com</title>
 </head>
-<body>
+<body onload="myfunction()">
+    <div id="loader">
+        <img src="/dist/image/Spinner-2.gif" alt="spinner">
+    </div>
     <!-- ----------------Header-section ---------------- -->
     <header class="header">
         <nav class="navbar wrapper">
@@ -23,7 +26,7 @@
                         <input type="checkbox" name="" id="show-drop">
                         <label for="show-drop" class="mobile">Blog +</label>
                         <ul class="drop-menu">
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="blog.html">Blog</a></li>
                             <li><a href="#">Blog Details</a></li>
                             <li><a href="#">Elements</a></li>
                             <li><a href="#">Product Details</a></li>
@@ -202,8 +205,40 @@
                     <div class="blog-post">
                         <h3>Recent Post</h3>
                         <div class="blogPost-item">
-                            <div class="blogPostleft"></div>
-                            <div class="blogPostleft"></div>
+                            <div class="blogPostleft">
+                                <img src="/dist/image/post_1.png" alt="">
+                            </div>
+                            <div class="blogPostRight">
+                                <h4>From life was you fish...</h4>
+                                <p>January 12, 2023</p>
+                            </div>
+                        </div>
+                        <div class="blogPost-item">
+                            <div class="blogPostleft">
+                                <img src="/dist/image/post_2.png" alt="">
+                            </div>
+                            <div class="blogPostRight">
+                                <h4>From life was you fish...</h4>
+                                <p>January 12, 2023</p>
+                            </div>
+                        </div>
+                        <div class="blogPost-item">
+                            <div class="blogPostleft">
+                                <img src="/dist/image/post_3.png" alt="">
+                            </div>
+                            <div class="blogPostRight">
+                                <h4>From life was you fish...</h4>
+                                <p>January 12, 2023</p>
+                            </div>
+                        </div>
+                        <div class="blogPost-item">
+                            <div class="blogPostleft">
+                                <img src="/dist/image/post_4.png" alt="">
+                            </div>
+                            <div class="blogPostRight">
+                                <h4>From life was you fish...</h4>
+                                <p>January 12, 2023</p>
+                            </div>
                         </div>
                         
                     </div>
@@ -240,10 +275,86 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
         <!-- ----------/Blog-section ----------- -->
     </main>
     <!-- ----------------main-section ---------------- -->
+
+    <!-- ----------------Footer-section ---------------- -->
+    <footer>
+        <div class="footer-container wrapper">
+            <div class="footer-items">
+                <div class="footer-title">
+                    <h3 class="foot-heading">Shion House</h3>
+                </div>
+                <div class="footer-content">
+                    <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros
+                        dolor interdum nulla.</p>
+                </div>
+                <div class="footer-Icon">
+                    <ul>
+                        <li><i class="fa fa-twitter"></i></li>
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-pinterest"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-items">
+                <div class="footer-title">
+                    <h3>Quick links</h3>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Image Licensin</a></li>
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-items">
+                <div class="footer-title">
+                    <h3>Shop Category</h3>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Image Licensin</a></li>
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-items">
+                <div class="footer-title">
+                    <h3>Partners</h3>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Image Licensin</a></li>
+                        <li><a href="#">Style Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-items">
+                <div class="footer-title">
+                    <h3>Get in touch</h3>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">(89) 982-278 356</a></li>
+                        <li><a href="#">demo@colorlib.com</a></li>
+                        <li><a href="#">67/A, Colorlib, Green road, NYC</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer wrapper">
+            <p>Copyright ©2023 All rights reserved | This template is made with <i class="fa fa-heart-o"></i> by
+                <span>Prince Kashyap</span>
+            </p>
+        </div>
+    </footer>
+    <!-- ----------------/Footer-section ---------------- -->
 
     <script src="https://kit.fontawesome.com/edcd5c8c16.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>

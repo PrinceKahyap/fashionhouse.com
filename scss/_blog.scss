@@ -1,7 +1,8 @@
 /* -----------------blog-style------------------ */
-.blog {
+.blog{
+    position: relative;
     width: 100%;
-    height: 500px;
+    height: auto;
     padding: 100px 0;
 
     .blog-container {
@@ -110,7 +111,7 @@
         }
 
         .blogRight {
-   
+
             .blog-search {
                 padding-bottom: 30px;
                 background: #fbf9ff;
@@ -169,15 +170,18 @@
                     padding-bottom: 20px;
                     border-bottom: 1px solid #f0e9ff;
                 }
-                ul{
+
+                ul {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
                     padding-top: 20px;
-                    li{
+
+                    li {
                         border-bottom: 1px solid #f0e9ff;
                         padding-bottom: 20px;
-                        a{
+
+                        a {
                             font-size: 1.4rem;
                             font-weight: 400;
                             color: #646D77;
@@ -185,10 +189,12 @@
                     }
                 }
             }
-            .blog-post{
+
+            .blog-post {
                 margin-top: 30px;
                 padding: 30px;
                 background: #fbf9ff;
+
                 h3 {
                     font-size: 2.2rem;
                     font-weight: 400;
@@ -196,13 +202,40 @@
                     color: #2d2d2d;
                     padding-bottom: 20px;
                     border-bottom: 1px solid #f0e9ff;
+                }
+                
+                .blogPost-item {
+                    display: grid;
+                    grid-template-columns: 0.7fr 2fr;
+                    column-gap: 20px;
+                    padding-top: 20px;
+                    align-items: center;
+
+                    .blogPostRight {
+                        h4 {
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                            padding-bottom: 0;
+                            font-family: $font-cinzel;
+                            color: #2d2d2d;
+                        }
+                        
+                        p {
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            color: #2d2d2d;
+                        }
+
+                    }
+
                 }
             }
 
-            .blog-clouds{
+            .blog-clouds {
                 margin-top: 30px;
                 padding: 30px;
                 background: #fbf9ff;
+
                 h3 {
                     font-size: 2.2rem;
                     font-weight: 400;
@@ -211,25 +244,30 @@
                     padding-bottom: 20px;
                     border-bottom: 1px solid #f0e9ff;
                 }
-                ul{
+
+                ul {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 10px;
                     padding-top: 30px;
-                    li{
+
+                    li {
                         padding: 8px 18px;
                         background: #fff;
                         border: 1px solid rgba(221, 221, 221, 0.5);
                         color: #000;
                         transition: 0.3s ease;
-                        &:hover{
+
+                        &:hover {
                             background: #9F78FF;
                             color: #fff;
                         }
-                        &:hover a{
+
+                        &:hover a {
                             color: #fff;
                         }
-                        a{
+
+                        a {
                             font-size: 1.2rem;
                         }
 
@@ -238,10 +276,11 @@
 
             }
 
-            .blog-feeds{
+            .blog-feeds {
                 margin-top: 30px;
                 padding: 30px;
                 background: #fbf9ff;
+
                 h3 {
                     font-size: 2.2rem;
                     font-weight: 400;
@@ -250,18 +289,20 @@
                     padding-bottom: 20px;
                     border-bottom: 1px solid #f0e9ff;
                 }
-                ul{
+
+                ul {
                     display: grid;
-                    grid-template-columns: repeat(3,1fr);
+                    grid-template-columns: repeat(3, 1fr);
                     grid-gap: 20px;
                     padding-top: 30px;
                 }
             }
 
-            .blog-newsletter{
+            .blog-newsletter {
                 margin-top: 30px;
                 padding: 30px;
                 background: #fbf9ff;
+
                 h3 {
                     font-size: 2.2rem;
                     font-weight: 400;
@@ -270,19 +311,22 @@
                     padding-bottom: 20px;
                     border-bottom: 1px solid #f0e9ff;
                 }
-                form{
+
+                form {
                     padding-top: 20px;
-                    input{
+
+                    input {
                         width: 100%;
                         padding: 15px;
                         outline: none;
                         border: 1px solid #f0e9ff;
                     }
-                    button{
+
+                    button {
                         margin-top: 20px;
                         width: 100%;
                         height: 50px;
-                        border:  1px solid #9F78FF;
+                        border: 1px solid #9F78FF;
                         background: #fff;
                         color: #9F78FF;
                         cursor: pointer;
@@ -295,3 +339,48 @@
 }
 
 /* -----------------/blog-style------------------ */
+
+/* -----------------Responsive-style------------------ */
+@media(max-width:992px){
+    .blog {
+        .blog-container {
+            grid-template-columns: 1fr;
+            padding: 0 30px;
+        }
+    }
+}
+@media(max-width: 568px){
+    .blog {
+        .blog-container {
+            padding: 50px 0;
+            padding: 0 10px;
+            .blogLeft{
+                .blogItems{
+                    .blog-img{
+                        .blogOverlay{
+                            width: 80px;
+                            height: 80px;
+                            span{
+                                font-size: 2.5rem;
+                            }
+                            p{
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                    .blog-content{
+                        padding: 10px;
+                        padding-top: 40px;
+                        h3{
+                            font-size: 2.2rem;
+                        }
+                        p{
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* -----------------/Responsive-style------------------ */
